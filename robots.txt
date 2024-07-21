@@ -3,7 +3,7 @@ User-agent: *
 Disallow:
 
 # Disallow access to specific directories
-Disallow: /admin/
+Disallow: /src/
 
 # Sitemap location
 Sitemap: https://alexander-holm.com/sitemap.xml
