@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="da-DK" prefix="og: https://ogp.me/ns#">
-<head prefix="og: http://ogp.me/ns#">
+<html lang="da-DK">
+<head>
+  
+  <!-- Important Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Alexander Holm, a web developer specializing in HTML, CSS, and JavaScript.">
 
-    <script>
-        fetch('schema.json')
-            .then(response => response.json())
-            .then(data => {
-                const script = document.createElement('script');
-                script.type = 'application/ld+json';
-                script.text = JSON.stringify(data);
-                document.head.appendChild(script);
-            })
-            .catch(error => console.error('Error loading JSON-LD:', error));
-    </script>
-<!-- Important -->
-<meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-  <!-- aos cdn -->
+  <!-- Scripts-->
+  <script src="script.min.js" defer></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- stylesheet -->
-   
-  <link rel="stylesheet" href="https://alexander-holm.com/style.css" />
-  <!-- google fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps">
+
 
 <body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
@@ -42,7 +36,7 @@
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="Alexander Holm logo">
         <div class="logo-top">
-          <img src="https://alexander-holm.com/header-icon.png" alt="alexander holm profile picture head" id="nav-avatar" class="img2" style="background-size:-303px;">
+          <img src="header-icon.png" alt="Alexander Holm Small Header Logo" id="nav-avatar" class="img2" style="background-size:-303px;">
           <style>
             .img2 {
               margin-top: 15px;
@@ -133,9 +127,6 @@
           <p class="jello">o</p>
           <p class="jello">;</p>
           &nbsp;
-          <p class="jello">I</p>
-          <p class="jello">'</p>
-          <p class="jello">m</p>
         </article>
         <article id="name" data-aos="fade-up" data-aos-delay="200">
           <p class="jello">A</p>
@@ -156,42 +147,15 @@
 
         <article id="work" data-aos="fade-up" data-aos-delay="400">
           <div>
-            <p class="jello">I</p>
+            <p class="jello">I'm</p>
+          &nbsp;
+          <p class="jello">A</p>
+          &nbsp;
+          <p class="jello">Developer</p>
           </div>
           <div>
-            <p class="jello">d</p>
-            <p class="jello">e</p>
-            <p class="jello">s</p>
-            <p class="jello">i</p>
-            <p class="jello">g</p>
-            <p class="jello">n</p>
-          </div>
-          <div>
-            <p class="jello">&</p>
-          </div>
-          <div>
-            <p class="jello">c</p>
-            <p class="jello">o</p>
-            <p class="jello">d</p>
-            <p class="jello">e</p>
-          </div>
-          <div>
-            <p class="jello">f</p>
-            <p class="jello">o</p>
-            <p class="jello">r</p>
-          </div>
-          <div>
-            <p class="jello">w</p>
-            <p class="jello">e</p>
-            <p class="jello">b</p>
-          </div>
         </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Hi, I'm Alexander Holm, a 15-year-old web enthusiast.<br />
-          <br />I love programming, coding, and designing websites.
-
-
-        </p>
+      </p>
         <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
           <a href="mailto:alexander.hm404@gmail.com" tabindex="-1">
             <button class="letsTalkBtn">
@@ -235,10 +199,7 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hello! I'm Alexander Holm, a 15-year-old web enthusiast with a strong passion for programming, coding, and
-              website design. From a young age, I've been drawn to the world of technology, fascinated by how websites
-              work and how digital experiences are created.
-
+              Comming Soon...
             </p>
             <br />
             <!-- Resume button -->
@@ -654,7 +615,7 @@
   </footer>
   <!-- footer ends here -->
 
-  <script src="main.js"></script>
+  <script src="main.min.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -663,7 +624,7 @@
 
   <script>
     function openURL() {
-      var url = "src/pdf/Alexander Holm Resume.pdf";
+      var url = "src/pdf/resume.pdf";
 
       window.open(url, "_blank");
     }
@@ -709,5 +670,4 @@
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
   data-id="alex404hm" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF"
   data-position="left" data-x_margin="18" data-y_margin="18"></script>
-
 </html>
