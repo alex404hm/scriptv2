@@ -1,546 +1,394 @@
 <!DOCTYPE html>
-<html lang="da-DK">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438878854052080"
-     crossorigin="anonymous"></script>
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438878854052080"
-     crossorigin="anonymous"></script>
-<!-- Alexander Holm Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3438878854052080"
-     data-ad-slot="1882078487"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <meta name="google-adsense-account" content="ca-pub-3438878854052080">
-  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-3438878854052080"
-     data-ad-slot="1882078487"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>
-  <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexander Holm Mortensen | Web Developer Portfolio</title>
-  <meta name="description" content="Professional portfolio of Alexander Holm Mortensen, a web developer specializing in HTML, CSS, and JavaScript.">
-  <meta name="keywords" content="Alexander Holm Mortensen, Alexander Holm Dev, Alexander Holm, Alexander Holm Portfolio">
-  <meta property="og:title" content="Alexander Holm Mortensen - Home">
-  <meta property="og:description" content="Professional portfolio of Alexander Holm Mortensen, a web developer specializing in HTML, CSS, and JavaScript.">
-  <meta property="og:image" content="">
-      <link rel="icon" type="image/x-icon" href="https://dm0nv59g.tinifycdn.com/favicon.ico">
-  <meta property="og:url" content="https://alexander-holm.com/index.html">
-  <meta property="og:type" content="website">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-  <link rel="canonical" href="https://alexander-holm.com/index.html">
-  <link rel="stylesheet" href="https://www.vinodjangid.site/style.css">
-  <head>
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="https://dm0nv59g.tinifycdn.com/style.min.css" as="style">
-    <link rel="stylesheet" href="https://dm0nv59g.tinifycdn.com/style.min.css">
-  
-    <!-- Preload Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps">
-  
-    <!-- Preload JS -->
-  </head>
-  
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(error => {
-          console.error('Service Worker registration failed:', error);
-        });
-    }
-  </script>
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander H. Mortensen - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        .gradient-text {
+            background: linear-gradient(to right, #00C6FF, #0072FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: linear-gradient(135deg, #0072FF, #00C6FF);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.5);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        #scrollTopBtn:hover {
+            transform: scale(1.2);
+        }
+        #scrollDownBtn {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            z-index: 100;
+            background: linear-gradient(135deg, #00C6FF, #0072FF);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.5);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        #scrollDownBtn:hover {
+            transform: scale(1.2);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 40;
+        }
+        .show {
+            display: block;
+        }
+        .hanging {
+            position: relative;
+            background: #333;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            margin: auto;
+            transform: translateY(0) rotate(0deg);
+            transition: transform 0.5s ease-in-out;
+        }
+        .hanging:hover {
+            transform: translateY(-10px) rotate(-2deg);
+        }
+        .snor {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ccc, #777);
+        }
+        .section-transition {
+            background: linear-gradient(to bottom, #1a202c, #2d3748);
+            position: relative;
+            z-index: -1;
+        }
+        .section-transition::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(26, 32, 44, 0), #1a202c);
+            z-index: -1;
+        }
+        .divider {
+            width: 100%;
+            height: 20px;
+            background-image: url('https://cdn.jsdelivr.net/npm/svg-separator/dist/assets/wave-pattern.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 40px 0;
+        }
+    </style>
 </head>
-
-<body class="body" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-  <noscript>Allow Javascript</noscript>
-   <header>
-    <div class="cursor-inner" id="cursor-inner"></div>
-    <div class="cursor-outer" id="cursor-outer"></div>
-
-    <div class="navbar" id="navbar" aria-label="Breadcrumb">
-      <div class="hey popup">Hey!</div>
-      <div class="logo" tabindex="0" aria-label="Alexander Holm logo">
-        <div class="logo-top">
-          <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/header-icon.png" alt="Alexander Holm Small Header Logo" id="nav-avatar" class="img2" style="background-size:-303px;">
-          <style>
-            .img2 {
-              margin-top: 15px;
-            }
-          </style>
-        </div>
-      </div>
-      <div class="navbar-tabs" id="navbar-tabs">
-        <ul class="navbar-tabs-ul">
-          <li class="home activeThistab aos-init aos-animate" data-aos="fade-down" data-aos-delay="100">
-            <a href="#home" tabindex="0" aria-label="Home menu button">
-              Home
-            </a>
-          </li>
-
-          <li class="about aos-init aos-animate" data-aos="fade-down" data-aos-delay="300">
-            <a href="#about" aria-label="about menu button">
-              About Me
-            </a>
-          </li>
-
-          <li class="skills aos-init aos-animate" data-aos="fade-down" data-aos-delay="500">
-            <a href="#skills" aria-label="skills menu button">
-              Skills
-            </a>
-          </li>
-
-          <li class="projects aos-init aos-animate" data-aos="fade-down" data-aos-delay="700">
-            <a href="#projects" aria-label="projects menu button">
-              Projects
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- navbar tabs ends -->
-    </div>
-  </header> <!-- header ends here -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438878854052080"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-fz-1+2p-52-14"
-     data-ad-client="ca-pub-3438878854052080"
-     data-ad-slot="8861886977"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <main>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438878854052080"
-     crossorigin="anonymous"></script>
-<!-- Alexander Holm Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3438878854052080"
-     data-ad-slot="1882078487"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    <!-- hamburger -->
-    <div class="hamburger aos-init aos-animate" id="hamburger" data-aos="fade">
-      <div class="hamburgerbase">
-        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
-          <span class="burger-bar" id="burger-bar1"></span>
-          <span class="burger-bar" id="burger-bar2"></span>
-          <span class="burger-bar" id="burger-bar3"></span>
-        </button>
-      </div>
-    </div>
-    <!-- hamburger -->
-    <div class="mobiletogglemenu" id="mobiletogglemenu">
-      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
-          <a href="#home" tabindex="0" aria-label="Home menu button">
-            Home
-          </a>
-        </li>
-
-        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
-          <a href="#about" tabindex="0" aria-label="about menu button">
-            About Me
-          </a>
-        </li>
-        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
-          <a href="#skills" tabindex="0" aria-label="skills menu button">
-            Skills
-          </a>
-        </li>
-        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
-          <a href="#projects" tabindex="0" aria-label="projects menu button">
-            Projects
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- mobile toggle menu ends -->
-
-    <section class="landing-page-container" id="home">
-      <div class="blob"></div>
-<h1></h1>
-      <div class="text-content" style="animation: fadeIn 2s;">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0" class="aos-init aos-animate">
-          <p class="jello">H</p>
-          <p class="jello">e</p>
-          <p class="jello">l</p>
-          <p class="jello">l</p>
-          <p class="jello">o</p>
-          <p class="jello">;</p>
-          &nbsp;
-        </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
-          <p class="jello">A</p>
-          <p class="jello">l</p>
-          <p class="jello">e</p>
-          <p class="jello">x</p>
-          <p class="jello">a</p>
-          <p class="jello">n</p>
-          <p class="jello">d</p>
-          <p class="jello">e</p>
-          <p class="jello">r</p>
-          &nbsp;
-          <p class="jello">H</p>
-          <p class="jello">o</p>
-          <p class="jello">l</p>
-          <p class="jello">m</p>
-        </article>
-
-        <article id="work" data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
-          <div>
-            <p class="jello">I'm</p>
-          &nbsp;
-          <p class="jello">A</p>
-          &nbsp;
-          <p class="jello">Developer</p>
-          </div>
-          <div>
-        </div></article>
-      <p></p>
-        <div class="contact-btn-div aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:alexander" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button></a>
-          <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-          </div>
-          <!-- setting div ends -->
-        </div>
-        <!-- contact-btn-div -->
-      </div>
-
-    </section>
-    <!-- landing page ends here -->
-    <section class="about-section-container aos-init aos-animate" id="about" data-aos="fade-up">
-      <div class="about-section">
-        <div class="section-heading">
-          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
-            About 
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
- 
-        <div class="info-dp-section">
-          <div class="about-info">
-<p tabindex="0">
-  Hello! My name is Alexander Holm Mortensen, and I’m a driven 15-year-old programmer and designer with a strong passion for technology.
-</p>
-<br>
-<p tabindex="0">
-  My journey into the world of IT began at an early age, sparked by a deep curiosity for creating and understanding digital solutions. Through my studies at Gladsaxe School and Bagsværd Boarding School, I have continually refined my skills and knowledge.
-</p>
-<br>
-<p tabindex="0">
-  In 2024, I will further specialize in programming and IT at Ballerup TEC. Thank you for exploring my portfolio; I hope my work resonates with and inspires you.
-</p>
-
-            <br />
-            <!-- Resume button -->
-            <button class="resume-btn" id="resume-btn" onclick="openURL()">
-              <div class="sign">
-                <svg viewBox="0 0 640 512">
-                  <path
-                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" /></path>
-                </svg>
-              </div>
-
-              <div class="text">Resume</div>
-            </button>
-          </div>
-
-          <div class="dp aos-init aos-animate" data-aos="fade-up">
-            <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/image.png"
-              alt="Alexander Holm" tabindex="0" aria-label="Alexander Holm Mortensen Picture Logo" / loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about section ends  -->
-
-    <section class="skills-section-container" id="skills">
-      <div class="skills-section">
-        <div class="section-heading aos-init aos-animate" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            Skills
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading aos-init aos-animate" data-aos="fade-up" tabindex="0" aria-label="As a frontend a developer these are the skills i have">
-            Tech Stack
-          </h3>
-          <ul class="tech-stack-wrapper">
-            <li class="tech-stack-box aos-init" data-aos="fade-up">
-              <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
-
-            <li class="tech-stack-box aos-init" data-aos="fade-up">
-              <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
-
-            <li class="tech-stack-box aos-init" data-aos="fade-up">
-              <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
-
-            <li class="tech-stack-box aos-init" data-aos="fade-up">
-              <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-            <li class="tech-stack-box aos-init" data-aos="fade-up">
-              <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/png/ailogo.png" alt="adobe illustrator skill" class="tech-stack-logo" />
-              <span class="tooltip">ADOBE AI</span>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- skills section ends -->
-    <section class="projects-section-container" id="projects">
-      <div class="projects-section-div">
-        <div class="section-heading aos-init" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
-            Projects
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-        
-        <div class="project-boxes-div">
-          <!-- Fix Movie AI start-->
-
-
-          <div data-aos="fade-up" class="project-box-wrapper aos-init">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <article class="ProjectHeading">Random Video</article>
-                <p class="ProjectDescription">
-                  An Learning Platform with random youtube
-
-
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/alex404hm" target="_blank" class="github-redirect"
-                    aria-label="Visit Pexelicons on GitHub">
-                    <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://alexander-holm.com" target="_blank" class="cta" aria-label="Visit Pexelicons Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#hero" class="text-2xl font-bold gradient-text">AHM</a>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-base hover:text-blue-400 transition-colors">About</a>
+                    <a href="#work" class="text-base hover:text-blue-400 transition-colors">Work</a>
+                    <a href="#skills" class="text-base hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#contact" class="text-base hover:text-blue-400 transition-colors">Contact</a>
                 </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- FIX Movie AI project box ends-->
-
-          <!-- Fix Movie AI start-->
-
-
-          <div data-aos="fade-up" class="project-box-wrapper aos-init">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <article class="ProjectHeading">Movie AI - MovieX</article>
-                <p class="ProjectDescription">
-                  Your ultimate companion in navigating the cinematic universe and finding the perfect movies.
-
-
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/alex404hm" target="_blank" class="github-redirect"
-                    aria-label="Visit Pexelicons on GitHub">
-                    <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://alexander-holm.com" target="_blank" class="cta" aria-label="Visit Pexelicons Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" onclick="toggleMenu()" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
-                  </a>
-                </div>
-              </div>
+                </button>
             </div>
-          </div>
-
-
-          <!-- FIX Movie AI project box ends-->
-
-
-<!-- CV start-->
-
-
-<div data-aos="fade-up" class="project-box-wrapper aos-init">
-  <div class="project-box project-box2" id="project-box2">
-    <div class="info-div">
-      <article class="ProjectHeading">CV Sender</article>
-      <p class="ProjectDescription">
-        Mass CV sender reduce the time of sending CV.
-      </p>
-      <div class="project-buttons">
-        <a href="https://github.com/alex404hm" target="_blank" class="github-redirect"
-          aria-label="Visit Pexelicons on GitHub">
-          <img loading="lazy" src="https://dm0nv59g.tinifycdn.com/src/svg/github.svg" alt="github redirect button" />
-        </a>
-        <a href="https://alexander-holm.com" target="_blank" class="cta" aria-label="Visit Pexelicons Live">
-          <span>Live view</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- CV project box ends-->
-
-
-           
         </div>
-      </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 border-b border-white/10">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#about" class="block text-base hover:text-blue-400 transition-colors">About</a>
+                <a href="#work" class="block text-base hover:text-blue-400 transition-colors">Work</a>
+                <a href="#skills" class="block text-base hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#contact" class="block text-base hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center pt-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-blue-400 text-2xl fade-in">Welcome to my portfolio</h2>
+                        <h1 class="text-6xl md:text-8xl font-bold leading-tight fade-in">
+                            Creative
+                            <span class="gradient-text">Developer</span>
+                            & Designer
+                        </h1>
+                        <p class="text-2xl text-gray-400 fade-in">
+                            Crafting digital experiences that combine innovative design with clean, efficient code.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 fade-in">
+                        <a href="#contact" class="px-8 py-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-all hover:scale-110">
+                            Get in Touch
+                        </a>
+                        <a href="#work" class="px-8 py-4 rounded-full border border-white/20 hover:border-blue-400 transition-all hover:scale-110">
+                            View Work
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 pt-8 fade-in">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="floating relative z-10">
+                        <img src="https://avatars.githubusercontent.com/u/163738985?s=400&u=c2a118b703b5b97d5276b0a1bca6327c530ad763&v=4" alt="Profile" class="rounded-3xl shadow-lg">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-3xl opacity-30 -z-10"></div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3438878854052080"
-     crossorigin="anonymous"></script>
-<!-- Alexander Holm Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3438878854052080"
-     data-ad-slot="1882078487"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <!-- main ends here -->
-    <footer id="footer">
-    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+    <div class="divider"></div>
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-8 mb-16 text-center">
+                <h2 class="text-5xl md:text-6xl font-bold gradient-text">About Me</h2>
+                <p class="text-xl text-gray-400">A passionate developer and designer with a knack for building intuitive user experiences.</p>
+            </div>
+            <div class="flex flex-col md:flex-row md:gap-16 items-center">
+                <div class="relative mb-8 md:mb-0 md:w-1/2 hanging">
+                    <div class="snor"></div>
+                    <div class="relative z-10">
+                        <img src="https://avatars.githubusercontent.com/u/163738985?s=400&u=c2a118b703b5b97d5276b0a1bca6327c530ad763&v=4" alt="About Me" class="rounded-3xl shadow-lg w-full">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-3xl opacity-30 -z-10"></div>
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-300 leading-relaxed space-y-6">
+                    <p>Hi, I'm Alexander H. Mortensen, a creative developer with a passion for turning ideas into reality through code. My journey in web development began at an early age, and I've been honing my skills ever since. I specialize in crafting modern and interactive web applications that provide users with meaningful experiences.</p>
+                    <p>My expertise lies in both frontend and backend development, enabling me to create full-stack solutions that are not only visually appealing but also highly functional. I enjoy working with the latest technologies and am always eager to learn and adapt to new trends. Whether it's designing elegant user interfaces or building scalable server-side systems, I thrive on pushing the boundaries of what's possible.</p>
+                    <div id="additional-content" class="hidden">
+                        <p>I believe that great software should not only be well-crafted but also serve the needs of those who use it. I place a strong emphasis on creating user-friendly experiences that make people's lives easier. My work is driven by curiosity and a desire to continuously improve, which has allowed me to stay at the forefront of new developments in the tech world.</p>
+                        <p>Outside of coding, I love collaborating with other creative individuals, sharing ideas, and taking on new challenges that test my skills. I am enthusiastic about exploring artificial intelligence, automation, and other areas that can push the web to new heights.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button id="read-more-btn" onclick="toggleReadMore()" class="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition-all">Read More</button>
+                        <a href="resume.pdf" target="_blank" class="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-all">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <!-- Work Section -->
+    <section id="work" class="py-32 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-4 mb-16 text-center">
+                <h2 class="text-5xl md:text-6xl font-bold gradient-text">Featured Projects</h2>
+                <p class="text-xl text-gray-400">Some of my best work from recent years</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Project Card 1 -->
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <img src="/api/placeholder/600/400" alt="AI Dashboard Project" class="w-full rounded-3xl mb-6 transition-transform group-hover:scale-105">
+                    <h3 class="text-3xl font-bold mb-4">AI Dashboard</h3>
+                    <p class="text-lg text-gray-300 mb-6">A comprehensive analytics platform powered by machine learning</p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">React</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">Python</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">TensorFlow</span>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <img src="/api/placeholder/600/400" alt="E-Commerce Platform Project" class="w-full rounded-3xl mb-6 transition-transform group-hover:scale-105">
+                    <h3 class="text-3xl font-bold mb-4">E-Commerce Platform</h3>
+                    <p class="text-lg text-gray-300 mb-6">A scalable online shopping solution with real-time inventory</p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">Next.js</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">Node.js</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-600/20 text-blue-400 text-sm">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-4 mb-16 text-center">
+                <h2 class="text-5xl md:text-6xl font-bold gradient-text">Skills & Expertise</h2>
+                <p class="text-xl text-gray-400">Technologies I work with</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <!-- Skill Card -->
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-code text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Frontend</h3>
+                    <p class="text-lg text-gray-400">React, Vue, Angular</p>
+                </div>
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-server text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Backend</h3>
+                    <p class="text-lg text-gray-400">Node.js, Python, Java</p>
+                </div>
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-database text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Database</h3>
+                    <p class="text-lg text-gray-400">MongoDB, PostgreSQL</p>
+                </div>
+                <div class="group p-8 rounded-3xl bg-gray-700 hover:bg-gray-600 transition-colors shadow-lg">
+                    <i class="fas fa-cloud text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Cloud</h3>
+                    <p class="text-lg text-gray-400">AWS, Google Cloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
     </button>
-    <div class="footer-background">
-      <div class="footer-blob"></div>
-    </div>
-    <div class="footer-foreground">
-      <div class="footercontainer">
-        <div class="two-words">
+    <!-- Scroll Down Button -->
+    <button onclick="scrollToSection('#about')" id="scrollDownBtn" title="Scroll Down" aria-label="Scroll Down">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    <!-- Contact Section -->
+    <section id="contact" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-8 gradient-text">Let's Create Something Amazing Together</h2>
+                    <p class="text-xl text-gray-400 mb-8">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:contact@example.com" class="flex items-center gap-4 text-gray-400 hover:text-white transition-colors" aria-label="Email">
+                            <i class="fas fa-envelope text-2xl"></i>
+                            contact@example.com
+                        </a>
+                        <a href="tel:+1234567890" class="flex items-center gap-4 text-gray-400 hover:text-white transition-colors" aria-label="Phone">
+                            <i class="fas fa-phone text-2xl"></i>
+                            +1 (234) 567-890
+                        </a>
+                    </div>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-white/10 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-white/10 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Subject</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-white/10 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea rows="6" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-white/10 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors"></textarea>
+                    </div>
+                    <button class="w-full px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
         </div>
-        <div class="social-media-container">
-          <div class="getintouch-heading">
-            <article>Get in Touch();</article>
-          </div>
-          <div class="logos">
-            <a href="https://www.instagram.com/alex404hm/" target="_blank" tabindex="0" aria-label="My instagram"><svg
-                viewBox="0 0 448 512" class="SocialHandle">
-                <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></path>
-              </svg></a>
-
-            <a href="https://www.linkedin.com/in/alex404hm" target="_blank" aria-label="My Linkdin"><svg
-                class="SocialHandle" viewBox="0 0 448 512">
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" /></path>
-              </svg></a>
-
-            <a href="https://github.com/alex404hm" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
-                class="SocialHandle">
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></path>
-              </svg></a>
-
-            <a href="mailto:alexander.hm404@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
-                viewBox="0 0 512 512">
-                <path
-                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" /></path>
-              </svg></a>
-          </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-400">&copy; 2023 Alexander H. Mortensen. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-avatar-container">
-          <div class="footer-avatar-face">
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <article>
-            Design & Built by Alexander Holm
-            &#169; 2024
-          </article>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- footer ends here -->
-
-  <script>
-    AOS.init();
-  </script>
-
-  <script>
-    function openURL() {
-      var url = "resume.pdf";
-
-      window.open(url, "_blank");
-    }
-  </script>
-
-  <!-- Schema Markup -->
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-  data-id="alex404hm" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF"
-  data-position="left" data-x_margin="18" data-y_margin="18"></script>
-
-<div style="position: fixed; top: 0px; left: 0px; width: 0px; height: 0px; background: rgba(0, 0, 0, 0); text-align: center; z-index: 9999999;"><div id="bmc-close-btn" style="position: fixed; align-items: center; justify-content: center; display: flex; visibility: hidden; border-radius: 100px; width: 40px; height: 40px; top: 16px; right: 16px; z-index: 9999999;"><svg style="width: 16px;height:16px;" width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M2.45156 27.6516L0.351562 25.5516L11.9016 14.0016L0.351562 2.45156L2.45156 0.351562L14.0016 11.9016L25.5516 0.351562L27.6516 2.45156L16.1016 14.0016L27.6516 25.5516L25.5516 27.6516L14.0016 16.1016L2.45156 27.6516Z" fill="#666"></path>
-  </svg>
-  </div><iframe id="bmc-iframe" allow="payment" title="Buy Me a Coffee" style="position: fixed; margin: 0px; border: 0px; inset: 0px 0px 32px; height: 0px; opacity: 0; width: 100vw; max-width: 100vw; min-height: 100%; max-height: 100%; border-radius: 10px; box-shadow: rgba(13, 12, 34, 0.1) -6px 0px 30px; background: url(&quot;https://cdn.buymeacoffee.com/assets/img/widget/loader.svg&quot;) center center / 64px no-repeat rgb(255, 255, 255); z-index: 999999; transition: all 0.25s ease 0s; transform-origin: right bottom; transform: scale(0); user-select: none;"></iframe></div><div id="bmc-wbtn" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: rgb(95, 127, 255); color: white; border-radius: 32px; position: fixed; left: 18px; bottom: 18px; box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px; z-index: 9999; cursor: pointer; font-weight: 600; transition: all 0.25s ease 0s;"><img loading="lazy" src="https://cdn.buymeacoffee.com/widget/assets/coffee%20cup.svg" alt="Buy Me A Coffee" style="height: 36px; width: 36px; margin: 0; padding: 0;" /></div><div style="position: fixed; left: 102px; bottom: 16px; transform-origin: right bottom; transform: scale(0.7); opacity: 0; transition: all 0.25s ease 0s; visibility: hidden; background: rgb(255, 255, 255); z-index: 9999; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px, rgba(0, 0, 0, 0.04) 0px 8px 40px, rgba(0, 0, 0, 0.15) 0px 0px 2px; padding: 16px; border-radius: 4px; font-size: 18px; color: rgb(13, 12, 34); width: auto; max-width: 260px; line-height: 1.5; font-family: &quot;Avenir Book&quot;, sans-serif;"></div></body>
-  </html>
-
-
-<style>
-  @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-</style>
+    </footer>
+    <script>
+        function toggleReadMore() {
+            const additionalContent = document.getElementById("additional-content");
+            const readMoreBtn = document.getElementById("read-more-btn");
+            if (additionalContent.classList.contains("hidden")) {
+                additionalContent.classList.remove("hidden");
+                readMoreBtn.textContent = "Show Less";
+            } else {
+                additionalContent.classList.add("hidden");
+                readMoreBtn.textContent = "Read More";
+            }
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function scrollToSection(sectionId) {
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
