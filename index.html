@@ -1,20 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alexander H. Mortensen - A creative developer & designer, crafting modern digital experiences with innovative design and efficient code.">
-    <meta name="keywords" content="Alexander H. Mortensen, Portfolio, Web Developer, Designer, Full Stack, Creative Developer">
-    <meta name="author" content="Alexander H. Mortensen">
-    <title>Alexander H. Mortensen - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Alexander H. Mortensen - A creative developer & designer crafting innovative digital experiences with clean and efficient code. Learn more about Alexander Holm Mortensen.">
+        <meta name="keywords" content="Alexander H. Mortensen, Alexander Holm, Web Developer, Creative Developer, Full Stack Developer, Software Engineer, Designer, UI/UX, Digital Experience, macOS Developer">
+        <meta name="author" content="Alexander H. Mortensen">
+    
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Alexander H. Mortensen - Creative Developer & Designer">
+        <meta property="og:description" content="Discover Alexander H. Mortensen, a creative developer focused on crafting modern and innovative digital experiences. Learn about Alexander Holm's expertise in web development, design, and more.">
+        <meta property="og:image" content="https://alexander-holm.com/images/og-image.jpg">
+        <meta property="og:url" content="https://alexander-holm.com">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Alexander H. Mortensen - Portfolio">
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Alexander H. Mortensen - Creative Developer & Designer">
+        <meta name="twitter:description" content="Explore the work and achievements of Alexander H. Mortensen, a creative developer with a focus on innovation and efficiency.">
+        <meta name="twitter:image" content="https://alexander-holm.com/images/twitter-image.jpg">
+        <meta name="twitter:site" content="@yourTwitterHandle">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="https://alexander-holm.com/favicon.ico" type="image/x-icon">
+    
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://alexander-holm.com">
+    
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://alexander-holm.com/css/styles.css">
+    
+        <!-- Preload Fonts for Better Performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Tailwind CSS & GSAP (deferred for better performance) -->
+        <script src="https://cdn.tailwindcss.com" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+        <!-- Schema.org Markup for Person -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alexander H. Mortensen",
+          "alternateName": "Alexander Holm",
+          "url": "https://alexander-holm.com",
+          "image": "https://alexander-holm.com/images/profile.jpg",
+          "jobTitle": "Creative Developer & Designer",
+          "description": "Alexander H. Mortensen is a creative developer and designer crafting innovative digital experiences with clean and efficient code.",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelancer"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/alexanderholm",
+            "https://www.instagram.com/alexanderholmm/",
+            "https://github.com/alexanderholm",
+            "https://twitter.com/alexanderholm"
+          ],
+          "birthPlace": "Denmark",
+          "birthDate": "2007-01-01"  // Replace with your actual birthdate
+        }
+        </script>
+    
+        <!-- Schema for Website Search -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://alexander-holm.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://alexander-holm.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+    
+        <!-- FAQ Schema to Appear in 'People Also Ask' -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is Alexander H. Mortensen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alexander H. Mortensen is a creative developer and designer specializing in crafting innovative digital experiences."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does Alexander H. Mortensen do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alexander H. Mortensen is a full stack developer and designer who focuses on web development, UI/UX design, and digital innovation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Alexander H. Mortensen based?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alexander H. Mortensen is based in Denmark."
+              }
+            }
+          ]
+        }
+        </script>
+    
+        <!-- People Also Search For Schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alexander H. Mortensen",
+          "url": "https://alexander-holm.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/alexanderholm",
+            "https://www.instagram.com/alexanderholmm/",
+            "https://github.com/alexanderholm"
+          ]
+        }
+        </script>
+    
+        <!-- Title -->
+        <title>Alexander H. Mortensen - Creative Developer & Designer</title>
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
